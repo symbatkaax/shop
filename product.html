@@ -1,0 +1,14 @@
+<h2>{{ item.name }}</h2>
+<p>{{ item.description }}</p>
+<p>Для кого: {{ item.type }}</p>
+<p>Тип: {{ item.category }}</p>
+<p>Размер: {{ item.size }}</p>
+<p><b>Цена: {{ item.selling_price }}</b></p>
+ 
+<form action="/cart_add/{{ item.id }}" method="post">
+    <button type="submit" class="btn">В корзину</button>
+</form>
+<br>
+<form action="/order/{{ item.id }}" method="post">
+    <button type="submit" class="btn">Заказать </button>
+</form>
